@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            background-color: #000000;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 6rem auto 2rem;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #FFA500;
+            font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+        h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f4a460;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .menu-section {
+            margin-bottom: 2rem;
+        }
+        .menu-item-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .menu-item {
+            flex: 0 0 48%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            background-color: #fafafa;
+            transition: background-color 0.3s;
+            box-sizing: border-box;
+        }
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            margin-right: 1rem;
+        }
+        .menu-item:hover {
+            background-color: #f4a460;
+            color: #fff;
+        }
+        .menu-item-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            flex-grow: 1;
+        }
+        .menu-item-price {
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .quote {
+            text-align: center;
+            font-size: 1.4rem;
+            color: #000000;
+            margin: 2rem 0;
+            font-style: italic;
+            padding: 1rem;
+            background-color: #FFA500;
+            border-left: 5px solid #FFA500;
+            border-radius: 5px;
+        }
+        .videos {
+            margin-top: 2rem;
+        }
+        .video-item-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2%;
+        }
+        .video-item {
+            flex: 0 0 48%;
+            margin-bottom: 2rem;
+        }
+        .video-item h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: #000000;
+        }
+        video {
+            width: 100%;
+            height: 315px;
+            border-radius: 5px;
+        }
+        #contact {
+            background-color: #333;
+            color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #contact h2 {
+            color: #fff;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        #contact p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to MeetingSquare Restaurant</h1>
+    </header>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#videos">Popular Dishes</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="container">
+        <section class="menu-section" id="menu">
+            <h2>Our Popular Menus</h2>
+            <div class="menu-item-container">
+                <div class="menu-item">
+                    <img src="tandoor1.jpeg" alt="Tandoori Biryani">
+                    <div class="menu-item-name">Tandoori Biryani</div>
+                    <div class="menu-item-price">₹499</div>
+                </div>
+                <div class="menu-item">
+                    <img src="paneer-tikka.jpg" alt="Paneer Tikka">
+                    <div class="menu-item-name">Paneer Tikka</div>
+                    <div class="menu-item-price">₹249</div>
+                </div>
+                <div class="menu-item">
+                    <img src="chicken-biryani.jpg" alt="Biryani">
+                    <div class="menu-item-name">Biryani</div>
+                    <div class="menu-item-price">₹199</div>
+                </div>
+                <div class="menu-item">
+                    <img src="chole.jpeg" alt="Chole Bhature">
+                    <div class="menu-item-name">Chole Bhature</div>
+                    <div class="menu-item-price">₹149</div>
+                </div>
+                <div class="menu-item">
+                    <img src="roganjosh.jpeg" alt="Rogan Josh">
+                    <div class="menu-item-name">Rogan Josh</div>
+                    <div class="menu-item-price">₹399</div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="quote">
+            "The best way to find yourself is to lose yourself in the service of others."
+        </div>
+        
+        <section class="videos" id="videos">
+            <h2>Popular Dishes</h2>
+            <div class="video-item-container">
+                <div class="video-item">
+                    <h3>Tandoori Biryani</h3>
+                    <video controls>
+                        <source src="Tandoor.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Biryani</h3>
+                    <video controls>
+                        <source src="biryani.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Address: 123 Food villa, Flavor Town, FL 12345 Airoli</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: meetingsquare@restaurant.com</p>
+        </section>
+    </div>
+</body>
+</html>
